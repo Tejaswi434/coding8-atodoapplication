@@ -1,39 +1,106 @@
-get http://localhost:3000/todos/?status=TO%20DO
-####
-get http://localhost:3000/todos/?priority=HIGH
+GET http://localhost:3000/todos/?status=TO%20DO
 ############
-get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+GET http://localhost:3000/todos/?status=TO%20D
 ########
-get http://localhost:3000/todos/?search_q=Play
-########second api
-get http://localhost:3000/todos/2/
+
+GET http://localhost:3000/todos/?priority=HIGH
+#############
+
+GET http://localhost:3000/todos/?priority=HIG
+
+##############
+
+
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+#####
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRES
 ###########
+get http://localhost:3000/todos/?search_q=Buy
+###########
+
+get http://localhost:3000/todos/?category=WORK&status=DONE
+###################
+
+
+get http://localhost:3000/todos/?category=WOK&status=DON
+######
+get http://localhost:3000/todos/?category=HOME
+##########
+get http://localhost:3000/todos/?category=HOM
+########
+
+get http://localhost:3000/todos/?category=LEARNING&priority=HIG
+
+########
+
+get http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+ 
+
+#############
+get http://localhost:3000/todos/?category=LEARNING&priority=HIG
+########
+
+
+get http://localhost:3000/todos/2/
+
+
+########
+get http://localhost:3000/agenda/?date=2021-12-12
+######
 post http://localhost:3000/todos/
 Content-Type:application/json
 
 {
-    
-  "id": 10,
+  "id": 6,
   "todo": "Finalize event theme",
   "priority": "LOW",
-  "status": "TO DO"
-
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
 }
+########
+put  http://localhost:3000/todos/2/
+Content-Type:application/json
 
+{
+      "status": "DONE"
+    }
 #############
+get http://localhost:3000/todos/1/
+Content-Type:application/json
+
+{ "dueDate": "2021-01-12"
+    
+}
+###############
 put http://localhost:3000/todos/3/
 Content-Type:application/json
 
 {
-  "status": "DONE"
+     "category": "LEARNING"
+    
+    
 }
-########
+
+##############
 put http://localhost:3000/todos/2/
 Content-Type:application/json
 
 {
-  "todo": "Some task"
+      "priority": "HIGH"
 }
 
+##############
+put http://localhost:3000/todos/1/
+Content-Type:application/json
+
+{
+      "todo": "Clean the garden"
+}
 ###########
-delete http://localhost:3000/todos/1/
+
+delete http://localhost:3000/todos/2/
+
+
